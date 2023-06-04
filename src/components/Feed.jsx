@@ -11,7 +11,6 @@ const Feed = () => {
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => {
-        console.log(data.items);
         setVideos(data.items);
       })
       .catch((error) => console.log(error));
